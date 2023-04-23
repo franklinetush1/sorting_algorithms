@@ -1,9 +1,6 @@
 #include "sort.h"
 
-void quick_sort(int *array, size_t size)
-{
-	quicksort_helper(0, size - 1, array, size);
-}
+
 /**
  * quicksort_helper - auxiliar function for the
  * quick_sort function
@@ -13,6 +10,11 @@ void quick_sort(int *array, size_t size)
  * @size: size of the array
  * Return: no return
  */
+void quick_sort(int *array, size_t size)
+{
+	quicksort_helper(0, size - 1, array, size);
+}
+
 void quicksort_helper(int below, int above, int *a, int size)
 {
 	int top, btm, i;
