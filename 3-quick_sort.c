@@ -1,18 +1,4 @@
 #include "sort.h"
-
-/**
- * quick_sort - function that sorts an array
- * of integers in ascending order
- *
- * @array: input arrray
- * @size: size of the array
- * Return: no return
- */
-void quick_sort(int *array, size_t size)
-{
-	quicksort_helper(0, size - 1, array, size);
-}
-
 /**
  * quicksort_helper - auxiliar function for the
  * quick_sort function
@@ -56,4 +42,17 @@ void quicksort_helper(int below, int above, int *a, int size)
 		quicksort_helper(below, btm - 1, a, size);
 		quicksort_helper(btm + 1, above, a, size);
 	}
+}
+
+/**
+ * quick_sort - function that sorts an array
+ * of integers in ascending order
+ *
+ * @array: input arrray
+ * @size: size of the array
+ * Return: no return
+ */
+void quick_sort(int *array, size_t size)
+{
+	quicksort_helper(0, size - 1, array, size);
 }
