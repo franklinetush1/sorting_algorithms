@@ -15,15 +15,15 @@
         interval = interval * 3 + 1;
     }
     while (interval > 0) {
-        for (int i = interval; i < size; i++) {
-            int temp = array[i];
+        for (int a = interval; a < size; a++) {
+            int temp = array[a];
             int j;
-            for (j = i; j >= interval && array[j - interval] > temp; j -= interval) {
+            for (j = a; j >= interval && array[j - interval] > temp; j -= interval) {
                 array[j] = array[j - interval];
             }
             array[j] = temp;
         }
         interval = (interval - 1) / 3;
-       print_array(array,size);
+       print_array(array, size);
     }
 }
